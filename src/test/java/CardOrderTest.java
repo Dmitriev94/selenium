@@ -51,7 +51,7 @@ public class CardOrderTest {
         $("[data-test-id='phone'] input").setValue("+79111488111");
         $("[data-test-id='agreement']").click();
         $$("button").find(exactText("Продолжить")).click();
-        $("[data-test-id='name']").shouldHave(text("Поле обязательно для заполнения"));
+        $(".input_invalid[data-test-id='name']").shouldHave(text("Поле обязательно для заполнения"));
     }
 
     @Test
@@ -60,7 +60,7 @@ public class CardOrderTest {
         $("[data-test-id='name'] input").setValue("Иван Валерьевич");
         $("[data-test-id='agreement']").click();
         $$("button").find(exactText("Продолжить")).click();
-        $("[data-test-id='phone']").shouldHave(text("Поле обязательно для заполнения"));
+        $(".input_invalid[data-test-id='phone']").shouldHave(text("Поле обязательно для заполнения"));
     }
 
 }
