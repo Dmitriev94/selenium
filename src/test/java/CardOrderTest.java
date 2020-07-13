@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.*;
 
-public class FormTest {
+public class CardOrderTest {
     @Test
     void shouldInputValidName() {
         open("http://localhost:9999");
